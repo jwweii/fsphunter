@@ -36,7 +36,8 @@ This method loads a transcript dictionary, where the ENST ID is the key and its 
 `import peptides_locator as pl`   
 `tx_dict = pl.txdict('tx_dic.pkl').tx_dict`   
 
-### rotationTx(tx='')
-This method rotates the transcript a base forward and backward. The output is a list with three elements. The output[0]
+### rotationTx(tx=' ')
+This method rotates the transcript a base forward and backward. The output is a list with three elements: the output[0] is the normal sequence, the output[1] is the backward rotation of that sequence, and the output[2] is the forward rotation of that sequence.
+
 
 
