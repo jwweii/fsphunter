@@ -18,8 +18,8 @@ For example, by the following command:
 `python3 fsphunter.py ENST00000379328 ATLQRSSLW`
 
 the console will display the following output:
-The length of this tx is 3123
-The peptide is at a forward tx from 2080 to 2107
-The genome coordinate is at chr10 from 8074160 to 8074187.
+The length of this tx is 3123   
+The peptide is at a forward tx from 2080 to 2107   
+The genome coordinate is at chr10 from 8074160 to 8074187   
 
 
