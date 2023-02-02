@@ -12,6 +12,8 @@ For users on WashU Compute1-RIS server:
 The version of this docker image is different from that for the use in a usual terminal because there seems to be a firewall in Compute1-RIS clusters, where AnnitationHub, a R package, cannot normally work. In this version, the required R object and SQLite file were preloaded in the docker image. 
 
 ## fsphunter.py
+This is an interactive program, which shows the genome cordinates on the terminal by giving the transcript ID and the frameshift peptide sequence. The command is as below:    
+
 `python3 fsphunter.py tx_id amino_acid_seq` 
 
 
