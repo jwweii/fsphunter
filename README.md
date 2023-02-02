@@ -15,7 +15,7 @@ The version of this docker image is different from that for the use in a usual t
 `python3 fsphunter.py tx_id amino_acid_seq` 
 
 For example, by the following command:
-`python3 fsphunter.py ENST00000379328 ATLQRSSLW`
+`python3 fsphunter.py ENST00000379328 ATLQRSSLW`,
 
 the console will display the following output:
 The length of this tx is 3123   
