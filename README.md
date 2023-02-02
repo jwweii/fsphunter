@@ -33,3 +33,5 @@ As previously stated, "peptides_locator.py" is a python package that provides th
 ### txdict()   
 This method loads a transcript dictionary, where the ENST ID is the key and its sequence is the value. The data is obtained from Homo_sapiens.GRCh38.cdna.all.fa. To save time, the dictionary is preloaded as tx_dic.pkl and does not need to be created every time.    
 #### example
+`import peptides_locator as pl
+tx_dict = pl.txdict('tx_dic.pkl').tx_dict`
