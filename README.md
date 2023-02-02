@@ -25,13 +25,18 @@ The peptide is at a forward tx from 2080 to 2107
 The genome coordinate is at chr10 from 8074160 to 8074187  
 
 ### Suggestion for searching multiple peptide sequences
-The fsphunter.py is convenient for searching genome coordinates by providing a single neoantigen peptide. However, it takes about 30 seconds to obtain the genome coordinate from a transcript coordinate due to the requirement of passing the transcript coordinate to the R program, "get_genome_coordinate.R," which imports large R packages such as Ensembldb and AnnotationHub. To more efficiently obtain genome coordinates from multiple neoantigen peptides, it is recommended to import "peptides_locator.py" as a package and use its methods to batch process transcript coordinates before passing them to the R program. This will reduce the need to repeatedly import the R packages.
+Although fsphunter.py is convenient for searching genome coordinates by providing a single neoantigen peptide, it takes about 30 seconds to obtain the genome coordinate from a transcript coordinate due to the requirement of passing the transcript coordinate to the R program, "get_genome_coordinate.R," which imports large R packages such as Ensembldb and AnnotationHub. To more efficiently obtain genome coordinates from multiple neoantigen peptides, it is recommended to import "peptides_locator.py" as a package and use its methods to batch process transcript coordinates before passing them to the R program. This will reduce the need to repeatedly import the R packages.
 
 ## peptides_locator.py
 As previously stated, "peptides_locator.py" is a python package that provides the functions required by "fsphunter.py." However, it can also be utilized for customized needs, such as batch searching transcript coordinates from multiple peptide sequences.  
 
-### txdict()   
+### txdict('filename')   
 This method loads a transcript dictionary, where the ENST ID is the key and its sequence is the value. The data is obtained from Homo_sapiens.GRCh38.cdna.all.fa. To save time, the dictionary is preloaded as tx_dic.pkl and does not need to be created every time.    
 #### example
 `import peptides_locator as pl`   
-`tx_dict = pl.txdict('tx_dic.pkl').tx_dict`
+`tx_dict = pl.txdict('tx_dic.pkl').tx_dict`   
+
+### rotationTx(tx='')
+This method rotates the transcript a base forward and backward. The output is a list with three elements. The output[0]
+
+
