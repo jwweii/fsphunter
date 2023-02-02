@@ -12,7 +12,7 @@ For users on WashU Compute1-RIS server:
 The version of this docker image is different from that for the use in a usual terminal because there seems to be a firewall in Compute1-RIS clusters, where AnnitationHub, a R package, cannot normally work. In this version, the required R object and SQLite file were preloaded in the docker image. 
 
 ## Example
-`python3 fsphunter.py tx_id amino_acid_seq`. 
+`python3 fsphunter.py tx_id amino_acid_seq` 
 
 For example, by the following command:
 `python3 fsphunter.py ENST00000379328 ATLQRSSLW`
