@@ -42,4 +42,5 @@ This method rotates the transcript a base forward and backward. The output is a 
 #### example
 `rotation_tx = pl.rotationTx(tx='ENST00000379328').get_rotationTx()`
 
-### translation(txs=[])
+### translation(txs=[ ])
+This method translates transcript sequences into amino acid sequences. The input is a list of transcript sequences in the order of 'normal', 'backward', and 'forward'. The output is a dictionary with keys 'normal', 'backward', and 'forward' and their corresponding amino acid sequences as values.
