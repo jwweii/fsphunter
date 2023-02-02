@@ -16,7 +16,7 @@ This is an interactive program, which shows the genome cordinates on the termina
 
 `python3 fsphunter.py tx_id amino_acid_seq`     
 
-The program is 
+The program is convinient for searching the genome coordinate by giving a single neoantigen peptide. However, the downside is that it takes a half minute to get the genome coordinate from a transcript coordinate because this process needs to pass the transcript coordinate to a R program, get_genome_coordinate.R, in which some big R packages, Ensembldb and AnnotationHub, will be imported to initialize the program. Therefore, if 
 
 ### Example for fsphunter.py
 For example, by the following command:
