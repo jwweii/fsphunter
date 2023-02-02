@@ -12,3 +12,14 @@ For users on WashU Compute1-RIS server:
 The version of this docker image is different from that for the use in a usual terminal because there seems to be a firewall in Compute1-RIS clusters, where AnnitationHub, a R package, cannot normally work. In this version, the required R object and SQLite file were preloaded in the docker image. 
 
 ## Example
+`python3 fsphunter.py tx_id amino_acid_seq`. 
+
+For example, by the following command:
+`python3 fsphunter.py ENST00000379328 ATLQRSSLW`
+
+the console will display the following output:
+The length of this tx is 3123
+The peptide is at a forward tx from 2080 to 2107
+The genome coordinate is at chr10 from 8074160 to 8074187.
+
+
