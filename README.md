@@ -1,7 +1,7 @@
 # fsphunter
 
 This program was developed to locate the genome coordinates by giving the amino acid sequences from the neoantigens derived from frameshift mutations. 
-The idea of how program works to: firstly, match the amino acid sequence to the frameshift transcripts; Then, take the advantage of the R package, Ensembldb, to locate the genome coordinates of the amino acid sequence. 
+The idea of how program works to: firstly, match the amino acid sequences to the frameshift transcripts and get the coordinate of those sequences in the transcripts; Then, take the advantage of the R package, Ensembldb, to locate the genome coordinates of the amino acid sequence. 
 
 
 To pull down the Docker image, run the following command in your terminal:  
