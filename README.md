@@ -24,6 +24,7 @@ The length of this tx is 3123
 The peptide is at a forward tx from 2080 to 2107   
 The genome coordinate is at chr10 from 8074160 to 8074187  
 
+### Suggestion for searching multiple peptide sequences
 The fsphunter.py is convenient for searching genome coordinates by providing a single neoantigen peptide. However, it takes about 30 seconds to obtain the genome coordinate from a transcript coordinate due to the requirement of passing the transcript coordinate to the R program, "get_genome_coordinate.R," which imports large R packages such as Ensembldb and AnnotationHub. To more efficiently obtain genome coordinates from multiple neoantigen peptides, it is recommended to import "peptides_locator.py" as a package and use its methods to batch process transcript coordinates before passing them to the R program. This will reduce the need to repeatedly import the R packages.
 
 ## peptides_locator.py
