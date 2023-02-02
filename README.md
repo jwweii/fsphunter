@@ -42,3 +42,4 @@ This method rotates the transcript a base forward and backward. The output is a 
 #### example
 `rotation_tx = pl.rotationTx(tx='ENST00000379328').get_rotationTx()`
 
+### translation(txs=[])
