@@ -14,8 +14,9 @@ This version of this docker image is different from that for the use in a usual 
 ## fsphunter.py
 This is an interactive program, which shows the genome cordinates on the terminal by giving the transcript ID and the frameshift peptide sequence. The command is as below:    
 
-`python3 fsphunter.py tx_id amino_acid_seq` 
+`python3 fsphunter.py tx_id amino_acid_seq`     
 
+The program is 
 
 ### Example for fsphunter.py
 For example, by the following command:
@@ -25,5 +26,7 @@ the console will display the following output:
 The length of this tx is 3123   
 The peptide is at a forward tx from 2080 to 2107   
 The genome coordinate is at chr10 from 8074160 to 8074187   
+
+
 
 
