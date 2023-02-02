@@ -1,6 +1,7 @@
 # fsphunter
 
-This program was developed to locate the genome coordinates by giving amino acid sequences of frameshift mutation peptides. 
+This program was developed to locate the genome coordinates by giving amino acid sequences of neoantigens derived from frameshift mutations. 
+The idea of this program is 
 
 
 To pull down the Docker image, run the following command in your terminal:  
