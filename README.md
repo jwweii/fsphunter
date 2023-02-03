@@ -72,5 +72,14 @@ By using pandas, the transcript coordinates can be obtained in bulk with followi
   `   peptide_positions = pl.peptide_to_tx(translations=rotation_aas, peptide=peptide).get_positions()`   
   `   df.at[index, 'tx_coordinate'] = str(list(peptide_positions.values()))`  
 
+
+### Batch Retrieval of Genome Coordinates by Multiple Transcript Coordinates   
+The batch_gn_coordinate.R is an example to obtain a batch of genome coordinates. The input tsv file should have a column of transcript ID and a column of transcript coordinates. The table may looks like below: 
+| Row | ENST_ID | tx_coordinate |
+| --- | --- | --- |
+| 1 | ENST00000336715 |[(2403, 2430)]|
+| 2 | ENST00000368801 |[(2090, 2117, 4190, 4217, 5600, 5627, 7010, 7037, 8420, 8447)]|
+
+
 ## Contact
 Evan Peng (chien-wei.p@wustl.edu)
