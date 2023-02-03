@@ -47,3 +47,11 @@ This method translates transcript sequences into amino acid sequences. The input
 
 #### example
 `rotation_aas = pl.translation(txs=rotation_tx).get_rotationAA()`
+
+### peptide_to_tx(translations= { }, peptide= ' ')
+The function inputs a string that represents the peptide sequence and a dictionary that represents the transcript translations into amino acid sequences. It outputs a dictionary with keys "normal", "backward", and "forward", and values as tuples that indicate the start and end coordinates of the peptide sequence within the corresponding transcript.  
+
+#### example
+`pep_positions = pl.peptide_to_tx(translations=rotation_aas, peptide=peptide).get_positions()`   
+
+### tx_to_genome()
