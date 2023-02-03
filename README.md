@@ -74,7 +74,7 @@ By using pandas, the transcript coordinates can be obtained in bulk with followi
 
 
 ### Batch Retrieval of Genome Coordinates by Multiple Transcript Coordinates   
-The batch_gn_coordinate.R is an example to obtain a batch of genome coordinates. The input tsv file should have a column of transcript ID and a column of transcript coordinates. The table may looks like below: 
+The batch_gn_coordinate.R is an example to obtain a batch of genome coordinates. The input tsv file should have a column of transcript ID and a column of transcript coordinates. The table may look like below: 
 | Row | ENST_ID | tx_coordinate |
 | --- | --- | --- |
 | 1 | ENST00000336715 |[(2403, 2430)]|
