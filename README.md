@@ -61,7 +61,7 @@ This function inputs a list into the R program, get_genome_coordinate.R, using t
 `list_to_r = ['ENST00000379328', 2080, 27]`    
 `output = pl.tx_to_genome(list_to_r=list_to_r).get_gn_coordinate()`
 
-## Batch Retrieval of Transcript Coordinates for Multiple Peptides
+### Batch Retrieval of Transcript Coordinates for Multiple Peptides
 By using pandas, the transcript coordinates can be obtained as following codes:  
 ` for index, row in df.iterrows():`  
   `   enst_id = row['tx']`  
