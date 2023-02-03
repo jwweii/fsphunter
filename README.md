@@ -54,7 +54,7 @@ The function inputs a string that represents the peptide sequence and a dictiona
 #### example
 `pep_positions = pl.peptide_to_tx(translations=rotation_aas, peptide='ATLQRSSLW').get_positions()`   
 
-### tx_to_genome()
+### tx_to_genome(list_to_r=[])
 This function inputs a list into the R program, get_genome_coordinate.R, using the 'ensembldb' package from R to determine the genome coordinate. The input list should be in the format ['tx_id', start_position_of_the_peptide_in_the_tx, base_width_of_the_target_sequence]. The output will be a list with the first number representing the chromosome number and the second number representing the starting position of the sequence. The output could be obtained by the function `get_gn_coordinate()`.     
 
 #### example
