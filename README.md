@@ -64,7 +64,7 @@ This function inputs a list into the R program, get_genome_coordinate.R, using t
 ### Batch Retrieval of Transcript Coordinates for Multiple Peptides
 By using pandas, the transcript coordinates can be obtained in bulk with following codes:  
 ` for index, row in df.iterrows():`  
-  `   enst_id = row['tx']`  
+  `   enst_id = row['ENST_ID']`  
   `   peptide = row['peptide']`  
   `   x = tx_dict[enst_id]`  
   `   rotation_tx = pl.rotationTx(tx=x).get_rotationTx()`  
