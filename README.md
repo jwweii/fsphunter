@@ -80,7 +80,7 @@ The batch_gn_coordinate.R is an example to obtain a batch of genome coordinates.
 | 1 | ENST00000336715 |[(2403, 2430)]|
 | 2 | ENST00000368801 |[(2090, 2117, 4190, 4217, 5600, 5627, 7010, 7037, 8420, 8447)]|
 
-For instance, the transcript ENST00000368801 has 5 coordinate sets starting at positions 2090, 4190, 5600, 7010, and 8420 and ending at 2117, 4217, 5627, 7037, and 8447, respectively.
+For instance, the transcript ENST00000368801 has 5 coordinates set starting at positions 2090, 4190, 5600, 7010, and 8420 and ending at 2117, 4217, 5627, 7037, and 8447, respectively.
 
 ## Contact
 Evan Peng (chien-wei.p@wustl.edu)
