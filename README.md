@@ -37,19 +37,19 @@ This method loads a transcript dictionary, where the ENST ID is the key and its 
 `tx_dict = pl.txdict('tx_dic.pkl').tx_dict`   
 
 ### rotationTx(tx=' ')
-This method rotates the transcript a base forward and backward. The output is a list with three elements: the output[0] is the normal sequence, the output[1] is the backward rotation of that sequence, and the output[2] is the forward rotation of that sequence.
+This method rotates the transcript a base forward and backward. The output is a list with three elements: the output[0] is the normal sequence, the output[1] is the backward rotation of that sequence, and the output[2] is the forward rotation of that sequence. The output could be obtained by the function `get.rotationTx()`.  
 
 #### example
 `rotation_tx = pl.rotationTx(tx='ENST00000379328').get_rotationTx()`
 
 ### translation(txs=[ ])
-This method translates transcript sequences into amino acid sequences. The input is a list of transcript sequences in the order of 'normal', 'backward', and 'forward'. The output is a dictionary with keys 'normal', 'backward', and 'forward' and their corresponding amino acid sequences as values.
+This method translates transcript sequences into amino acid sequences. The input is a list of transcript sequences in the order of 'normal', 'backward', and 'forward'. The output is a dictionary with keys 'normal', 'backward', and 'forward' and their corresponding amino acid sequences as values. The output could be obtained by the function `get.rotationAA()`.  
 
 #### example
 `rotation_aas = pl.translation(txs=rotation_tx).get_rotationAA()`
 
 ### peptide_to_tx(translations= { }, peptide= ' ')
-The function inputs a string that represents the peptide sequence and a dictionary that represents the transcript translations into amino acid sequences. It outputs a dictionary with keys "normal", "backward", and "forward", and values as tuples that indicate the start and end coordinates of the peptide sequence within the corresponding transcript.  
+The function inputs a string that represents the peptide sequence and a dictionary that represents the transcript translations into amino acid sequences. It outputs a dictionary with keys "normal", "backward", and "forward", and values as tuples that indicate the start and end coordinates of the peptide sequence within the corresponding transcript. The output could be obtained by the function `get.positions()`.  
 
 #### example
 `pep_positions = pl.peptide_to_tx(translations=rotation_aas, peptide=peptide).get_positions()`   
