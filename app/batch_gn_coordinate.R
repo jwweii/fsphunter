@@ -2,7 +2,6 @@ library(ensembldb)
 library(AnnotationHub)
 library(stringr)
 library(dplyr)
-library(purrr)
 
 #load correct version of ensembl cache (v93) from the hub
 ah <- AnnotationHub()
@@ -10,9 +9,8 @@ qr <- query(ah, c("EnsDb", "v93", "Homo sapiens"))
 edb = qr[[1]]
 
 #read tsv file
-tx_coordinate <- read.table("tx_coordinate.tsv", header = TRUE, sep = "\t")
+tx_coordinate <- read.table("path/to/tsv", header = TRUE, sep = "\t")
 
-test_subset <- tx_coordinate %>% sample_frac(0.00015)
 
 #extract tx coordinates 
 tx_coordinate$tx_coordinate_n <- lapply(tx_coordinate$tx_coordinate, function(x) {
@@ -74,30 +72,12 @@ get_gn_coordinate <- function(test_n, test_id){
   return(output)
 }
 
-# test for a single peptide sequence
-test_n <- tx_coordinate$tx_coordinate_n[[1476]]
-test_id <- tx_coordinate$longest_cds[[1476]]
-test_n <- tx_coordinate$tx_coordinate_n[[1]]
-test_id <- tx_coordinate$longest_cds[[1]]
-test_n <- test_subset$tx_coordinate_n[[16]]
-test_id <- test_subset$longest_cds[[16]]
-
-gn_cor <- get_gn_coordinate(test_n, test_id)
-gn_cor
-
-for (i in 1:nrow(test_subset)){
-  test_n <- test_subset$tx_coordinate_n[[i]]
-  test_id <- test_subset$longest_cds[[i]]
-  gn_cor <- get_gn_coordinate(test_n, test_id)
-  test_subset$gn_cor[[i]] <- gn_cor
-}
-
+# Create a for loop to getting the genome coordinates on each row
 for (i in 1:nrow(tx_coordinate)){
   test_n <- tx_coordinate$tx_coordinate_n[[i]]
   test_id <- tx_coordinate$longest_cds[[i]]
   gn_cor <- get_gn_coordinate(test_n, test_id)
   tx_coordinate$gn_cor[[i]] <- gn_cor
-  print(i)
 }
 
 
