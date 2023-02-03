@@ -64,10 +64,10 @@ This function inputs a list into the R program, get_genome_coordinate.R, using t
 ## Batch Retrieval of Transcript Coordinates for Multiple Peptides
 By using pandas, the transcript coordinates can be obtained as following codes:  
 `for index, row in raw_df.iterrows():`  
-  enst_id = row['longest_cds']` 
-  peptide = row['peptide']` 
-  x = tx_dict[enst_id]` 
-  rotation_tx = pl.rotationTx(tx=x).get_rotationTx()` 
-  rotation_aas = pl.translation(txs=rotation_tx).get_rotationAA()` 
-  peptide_positions = pl.peptide_to_tx(translations=rotation_aas, peptide=peptide).get_positions()`  
-  raw_df.at[index, 'tx_coordinate'] = str(list(peptide_positions.values()))  `
+  `enst_id = row['longest_cds']` 
+  `peptide = row['peptide']` 
+  `x = tx_dict[enst_id]` 
+  `rotation_tx = pl.rotationTx(tx=x).get_rotationTx()` 
+  `rotation_aas = pl.translation(txs=rotation_tx).get_rotationAA()` 
+  `peptide_positions = pl.peptide_to_tx(translations=rotation_aas, peptide=peptide).get_positions()`  
+  `raw_df.at[index, 'tx_coordinate'] = str(list(peptide_positions.values()))  `
