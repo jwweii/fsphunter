@@ -72,5 +72,5 @@ By using pandas, the transcript coordinates can be obtained in bulk with followi
   `   peptide_positions = pl.peptide_to_tx(translations=rotation_aas, peptide=peptide).get_positions()`   
   `   df.at[index, 'tx_coordinate'] = str(list(peptide_positions.values()))`  
 
-### Contact
+## Contact
 Evan Peng (chien-wei.p@wustl.edu)
