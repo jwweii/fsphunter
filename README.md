@@ -1,6 +1,6 @@
 # fsphunter
 
-The program is created to locate genome coordinates based on amino acid sequences of neoantigens originating from frameshift mutations. It matches the sequences to the frameshift transcripts to get their transcript coordinates, then uses the Ensembldb R package to find the corresponding genome coordinates. The database used is EnsDb.Hsapiens.v93.
+The program is created to locate genome coordinates based on amino acid sequences of neoantigens originating from frameshift mutations. It matches the sequences to the frameshift transcripts to get their transcript coordinates, then uses the Ensembldb R package to find the corresponding genome coordinates. The Ensembl cache used is EnsDb.Hsapiens.v93.
 
 ## Docker image
 To pull down the Docker image, run the following command in your terminal:  
