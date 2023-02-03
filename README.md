@@ -52,9 +52,11 @@ This method translates transcript sequences into amino acid sequences. The input
 The function inputs a string that represents the peptide sequence and a dictionary that represents the transcript translations into amino acid sequences. It outputs a dictionary with keys "normal", "backward", and "forward", and values as tuples that indicate the start and end coordinates of the peptide sequence within the corresponding transcript. The output could be obtained by the function `get.positions()`.  
 
 #### example
-`pep_positions = pl.peptide_to_tx(translations=rotation_aas, peptide=peptide).get_positions()`   
+`pep_positions = pl.peptide_to_tx(translations=rotation_aas, peptide='ATLQRSSLW').get_positions()`   
 
 ### tx_to_genome()
-This function passes a list to the R program, get_genome_coordinate.R, where the R package 'ensembldb' is used to locate the genome coordinate. The list should be format as ['tx_id', start_position_of_the_peptide_in_the_tx, base_width_of_the_target_sequence].
+This function inputs a list into the R program, get_genome_coordinate.R, using the 'ensembldb' package from R to determine the genome coordinate. The input list should be in the format ['tx_id', start_position_of_the_peptide_in_the_tx, base_width_of_the_target_sequence]. The output will be a list with the first number representing the chromosome number and the second number representing the starting position of the sequence. The output could be obtained by the function `get_gn_coordinate()`.     
 
-
+#### example
+`list_to_r = ['ENST00000379328', 2080, 27]` 
+`output = pl.tx_to_genome(list_to_r=list_to_r).get_gn_coordinate()`
