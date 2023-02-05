@@ -60,7 +60,7 @@ get_gn_coordinate <- function(test_n, test_id){
   } else{
     rng_tx <- IRanges(start = start, width = width, names = c(names))
     rng_gnm <- transcriptToGenome(rng_tx, edb)
-    chr <- rng_gnm[[1]]@seqnames@lengths
+    chr <- rng_gnm[[1]]@seqinfo@seqnames
     gn_start <- c()
     for (j in 1:length(names)){
       end <- c(rng_gnm[[j]]@ranges@start + 26)
